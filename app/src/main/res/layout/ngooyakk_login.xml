@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:layout_width="473dp"
+        android:layout_height="698dp"
+        android:src="@drawable/bg1"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center" />
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:fitsSystemWindows="true"
+            android:fillViewport="false">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="56dp"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+                    <!-- Content here -->
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/logo"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="70dp" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/usernameText"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:hint="Username"
+                        android:background="@drawable/rounded_background"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/passwordText"
+                        android:inputType="textPassword"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:hint="Password"
+                        android:linksClickable="false"
+                        android:background="@drawable/rounded_background" />
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:background="#fff"
+                        android:layout_height="wrap_content"
+                        android:text="LOGIN"
+                        android:id="@+id/buttLogin"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="40dp"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="REGISTER"
+                        android:id="@+id/buttRegister"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#fff"/>
+                </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
