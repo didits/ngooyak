@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.admintaponkatul.ngooyakk"
-        minSdkVersion 10
+        minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -25,6 +25,14 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
     compile 'com.mcxiaoke.volley:library:1.0.+'
-    compile "com.android.support:support-v4:18.0.+"
     compile 'com.google.android.gms:play-services-maps:8.4.0'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile "com.android.support:support-v4:23.1.1"
+    compile "com.android.support:support-v13:23.1.1"
+    compile 'com.seatgeek:placesautocomplete:0.1-SNAPSHOT'
+    compile 'com.jakewharton:butterknife:6.0.0'
+}
+
+repositories {
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }

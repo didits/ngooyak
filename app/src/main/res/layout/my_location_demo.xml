@@ -14,17 +14,77 @@
      limitations under the License.
 -->
 <!-- This can go anywhere in your layout (see other demos for some examples). -->
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
+    <!--ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/slide2"
+        android:layout_gravity="top"
+        android:scaleType="centerCrop" /-->
+
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:background="@color/wallet_holo_blue_light"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:onClick="onMyLocation"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:textColor="#fff" />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:padding="10dp"
     android:id="@+id/layout">
 
-    <fragment
-        android:id="@+id/map"
-        class="com.google.android.gms.maps.SupportMapFragment"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/peta_icon"
+                android:layout_centerInParent="true"
+                android:layout_gravity="top"/>
+        </RelativeLayout>
 </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tap_text"
+            android:text="@string/tap_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/camera_text"
+            android:text="@string/move_the_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

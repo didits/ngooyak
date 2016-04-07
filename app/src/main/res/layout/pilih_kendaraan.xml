@@ -4,20 +4,30 @@
     android:layout_height="match_parent">
 
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/slide2"
+        android:layout_gravity="top"
+        android:scaleType="centerCrop" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hai Sekar"
-        android:id="@+id/textView2"
+        android:text="Hai NULL"
+        android:id="@+id/textViewNama"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:textSize="30sp" />
+        android:textSize="25sp"
+        android:textColor="@color/wallet_holo_blue_light"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Because you a FEMALE please choose your DRIVER"
-        android:id="@+id/textView3"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
@@ -27,16 +37,22 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:orientation="vertical">
-        <RadioButton android:id="@+id/radio_pirates"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+        <RadioButton android:id="@+id/radio_man"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="wanita"
+            android:text="Man"
             android:onClick="onRadioButtonClicked"/>
-        <RadioButton android:id="@+id/radio_ninjas"
+        <RadioButton android:id="@+id/radio_woman"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="pria"
+            android:text="woman"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
             android:onClick="onRadioButtonClicked"/>
     </RadioGroup>
 

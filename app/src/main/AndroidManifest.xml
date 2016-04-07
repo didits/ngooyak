@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.admintaponkatul.ngooyakk" >
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <!-- EXTERNAL_STORAGE permissions are optional for Android 6.0 onwards. -->
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
@@ -46,7 +46,7 @@
             android:label="@string/title_activity_maps" >
         </activity>
         <activity
-            android:name=".Register"
+            android:name=".RegisterPost"
             android:label="@string/title_activity_maps" >
         </activity>
         <activity
@@ -54,8 +54,21 @@
             android:label="@string/title_activity_maps" >
         </activity>
         <activity
+            android:name=".ToLocation"
+            android:label="@string/title_activity_maps" >
+        </activity>
+        <activity
             android:name=".PilihBike"
             android:label="@string/title_activity_maps" >
+        </activity>
+        <activity
+            android:name=".CobaCariLokasi"
+            android:label="@string/title_activity_maps" >
+        </activity>
+        <activity
+            android:name=".ListBike"
+            android:label="@string/title_activity_maps"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
     </application>

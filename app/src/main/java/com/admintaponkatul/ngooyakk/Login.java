@@ -72,7 +72,7 @@ public class Login extends Activity implements View.OnClickListener{
     private void login(){
         //Getting values from edit texts
         final String email = editTextUsername.getText().toString().trim();
-        final String password = editTextPassword.getText().toString().trim();
+        final String pass = editTextPassword.getText().toString().trim();
 
 
         //Creating a string request
@@ -81,7 +81,11 @@ public class Login extends Activity implements View.OnClickListener{
                     @Override
                     public void onResponse(String response) {
                         //If we are getting success from server
-                        if(response.trim().equals("success")){
+                        if(response.trim().equals("1"))
+                            Toast.makeText(Login.this, "Email belum terdaftar", Toast.LENGTH_LONG).show();
+                        else if(response.trim().equals("2"))
+                            Toast.makeText(Login.this, "Password salah", Toast.LENGTH_LONG).show();
+                        else if(response.trim().equals("3")){
 
                             //Creating a shared preference
                             SharedPreferences sharedPreferences = Login.this.getSharedPreferences(ConfigJson.SHARED_PREF_NAME, Context.MODE_PRIVATE);
@@ -102,7 +106,7 @@ public class Login extends Activity implements View.OnClickListener{
                         }else{
                             //If the server response is not success
                             //Displaying an error message on toast
-                            Toast.makeText(Login.this, "Invalid username or password", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Login.this, "Operasi gagal", Toast.LENGTH_LONG).show();
                         }
                     }
                 },
@@ -117,7 +121,7 @@ public class Login extends Activity implements View.OnClickListener{
                 Map<String,String> params = new HashMap<>();
                 //Adding parameters to request
                 params.put(ConfigJson.KEY_EMAIL, email);
-                params.put(ConfigJson.KEY_PASSWORD, password);
+                params.put(ConfigJson.KEY_PASSWORD, pass);
 
                 //returning parameter
                 return params;
@@ -132,7 +136,7 @@ public class Login extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         if(v == signUp){
-            Intent intent = new Intent(Login.this, Register.class);
+            Intent intent = new Intent(Login.this, RegisterPost.class);
             startActivity(intent);
             finish();
         }else
